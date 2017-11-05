@@ -10,8 +10,35 @@ namespace FP_csharp1
 	{
 		static void Main( string [ ] args )
 		{
+
+			Digit haha = new Digit(3);
+			byte temp = 3;
+			var res = temp + haha;
+			var ya = (string)haha;
+			Console.WriteLine( res );
+			Console.WriteLine( haha );
+			Console.WriteLine( ya );
+			Console.ReadLine();
 		}
 	}
+
+	struct Digit
+	{
+		byte value;
+
+		public Digit( byte val )
+		{
+			if ( val > 9 ) throw new ArgumentException();
+			this.value = val;
+		}
+
+		public static implicit operator byte(Digit d)
+			=> d.value;
+
+		public static explicit operator string(Digit d)
+			=> d.value.ToString() + "convered";
+	}
+
 
 	
 }

@@ -8,14 +8,14 @@ namespace FP_csharp1.C1
 {
 	class Ex1
 	{
-		decimal RecomputeTotal( Order order , List<OrderLine> linesToDelete )
-		{
-			var result = 0m;
-			foreach ( var line in order.OrderLines)
-			{
-
-			}
-		}
+		//decimal RecomputeTotal( Order order , List<OrderLine> linesToDelete )
+		//{
+		//	var result = 0m;
+		//	foreach ( var line in order.OrderLines)
+		//	{
+		//
+		//	}
+		//}
 
 		class Product
 		{
