@@ -10,6 +10,7 @@ namespace FP_csharp1
 	{
 		static void Main( string [ ] args )
 		{
+			MapBindExample.main();
 
 			Digit haha = new Digit(3);
 			byte temp = 3;
