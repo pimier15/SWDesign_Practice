@@ -151,6 +151,7 @@
     <Compile Include="C1\Ex2_2 Avoid Mutating.cs" />
     <Compile Include="C1\EX2_2.cs" />
     <Compile Include="C3\Maybe_Practice.cs" />
+    <Compile Include="C4\MapBindExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
