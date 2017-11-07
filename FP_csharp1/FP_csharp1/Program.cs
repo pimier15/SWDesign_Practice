@@ -10,6 +10,11 @@ namespace FP_csharp1
 	{
 		static void Main( string [ ] args )
 		{
+			Enumerable.Range( 0, 10 ).ToList().ForEach(Console.WriteLine);
+			
+
+
+			// Test Session
 
 			Digit haha = new Digit(3);
 			byte temp = 3;
@@ -20,6 +25,9 @@ namespace FP_csharp1
 			Console.WriteLine( ya );
 			Console.ReadLine();
 		}
+
+
+
 	}
 
 	struct Digit

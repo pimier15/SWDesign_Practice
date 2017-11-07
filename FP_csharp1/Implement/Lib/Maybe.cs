@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Implement.Lib
 {
 	using Implement.Type;
 
-	public static class F
+	public static partial class Main
 	{
 		public static Nothing Nothing = Nothing.Defult;
 		public static Just<T> Just<T>( T value ) => new Just<T>( value );
