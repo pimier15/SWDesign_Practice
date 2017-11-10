@@ -148,6 +148,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C1\DictionaryTip.cs" />
     <Compile Include="C1\Ex2_2 Avoid Mutating.cs" />
     <Compile Include="C1\EX2_2.cs" />
     <Compile Include="C3\Maybe_Practice.cs" />
@@ -160,7 +161,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="C4\" />
     <Folder Include="c5\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
