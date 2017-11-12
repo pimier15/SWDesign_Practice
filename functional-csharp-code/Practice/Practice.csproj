@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankExample\BankExam2.cs" />
+    <Compile Include="dataType\Class1.cs" />
     <Compile Include="dataType\Maybe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
