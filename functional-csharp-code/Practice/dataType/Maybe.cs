@@ -8,7 +8,8 @@ using Unit = System.ValueTuple;
 namespace Practice.dataType
 {
 	using MaybeType;
-	public static class Handler
+	using static Handler;
+	public static partial class Handler
 	{
 
 		public static MaybeType.Nothing None => Nothing.Defualt;
@@ -31,7 +32,18 @@ namespace Practice.dataType
 			public static implicit operator Maybe<A>(MaybeType.Nothing _) => new Maybe<A>();
 			public static implicit operator Maybe<A>(MaybeType.Just<A> just) => new Maybe<A>(just.Value);
 
+		public B Match<B>( Func<B> Nothing , Func<A, B> Just  )
+			=> this.IsJust ? Just( this.Value ) : Nothing();
 		}
+
+	public static class MaybeExt
+	{
+		public static Maybe<A> Where<A>
+			( this Maybe<A> self, Func<A, bool> pred )
+			=> self.Match(
+				() => None,
+				x => pred(x) ? self : None );
+	}
 	namespace MaybeType
 	{
 		public struct Nothing

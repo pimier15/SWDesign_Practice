@@ -47,8 +47,8 @@ namespace LaYumba.Functional
 
       public bool Equals(Option.None _) => isNone;
 
-      public static bool operator ==(Option<T> @this, Option<T> other) => @this.Equals(other);
-      public static bool operator !=(Option<T> @this, Option<T> other) => !(@this == other);
+      public static bool operator == (Option<T> @this, Option<T> other) => @this.Equals(other);
+      public static bool operator != (Option<T> @this, Option<T> other) => !(@this == other);
 
       public override string ToString() => isSome ? $"Some({value})" : "None";
    }
