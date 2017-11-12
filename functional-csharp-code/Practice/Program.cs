@@ -7,6 +7,7 @@ using Practice.dataType;
 using static System.Linq.Enumerable;
 using static System.Console;
 using static Practice.dataType.EnumerableExtcs;
+using static Practice.dataType.Handler;
 
 namespace Practice
 {
@@ -18,7 +19,7 @@ namespace Practice
 			var rang1 = List( Range( 1,3).ToArray() );
 			var rang2 = List( Range( 1,3).ToList() );
 
-
+			Just( 1 ).AsEnumerable().Count();
 		}
 
 

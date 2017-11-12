@@ -34,6 +34,12 @@ namespace Practice.dataType
 
 		public B Match<B>( Func<B> Nothing , Func<A, B> Just  )
 			=> this.IsJust ? Just( this.Value ) : Nothing();
+
+		public IEnumerable<A> AsEnumerable()
+		{
+			if ( IsJust ) yield return Value;
+		}
+
 		}
 
 	public static class MaybeExt
