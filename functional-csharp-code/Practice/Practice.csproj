@@ -57,6 +57,7 @@
     <Compile Include="dataType\EnumerableExtcs.cs" />
     <Compile Include="dataType\Maybe.cs" />
     <Compile Include="dataType\MapAndBind.cs" />
+    <Compile Include="dataType\MaybeAndEnumerableExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
