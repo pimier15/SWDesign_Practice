@@ -22,8 +22,8 @@ namespace Practice
 			tt[0] = new int[] { 1, 2, 3 };
 			tt[1] = new int[] { 10, 20, 30 };
 			tt[2] = new int[] { 1000, 2000 };
-			var res= tt.Bind( x => x.Map(y => y*10000) ).ToList();
-
+			var res= tt.Map( x => x.Map(y => y*10000).ToList() ).ToList();
+			var res2 = tt.Bind( x=> x.Map(y => y*10000)).ToList();
 
 
 			var temp = List(1,2,3);

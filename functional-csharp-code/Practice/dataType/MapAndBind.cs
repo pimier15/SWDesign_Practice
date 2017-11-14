@@ -8,79 +8,47 @@ namespace Practice.dataType
 {
 	using static Practice.dataType.Handler ;
 	using Practice.dataType.MaybeType;
-	using static MapExt;
 	using static System.Linq.Enumerable;
 	public class MapAndBind
 	{
 		public void main()
 		{
 			Func<int,string>  toText = x => x.ToString();
-			Range( 3, 1 ).Map( toText );
 		}
 
 	}
 
-	public static class MapExt
+	public static class ISet_IDict_Map
 	{
-		public static IEnumerable<B> Map<A, B>
-			( this IEnumerable<A> self, Func<A, B> f )
+		public static ISet<R> Map<T, R>
+			( this ISet<T> self, Func<T, R> f )
 		{
-			foreach ( var x in self )
+			return new HashSet<R>( self.Select( x => f( x ) ) );
+		}
+
+		public static IDictionary<K, R> Map<K, T, R>
+			( this IDictionary<K, T> self, Func<T, R> f )
+		{
+			var res = new Dictionary<K , R>();
+			foreach ( var item in self )
 			{
-				yield return f( x );
+				res[item.Key] = f( item.Value );
 			}
+			return res;
 		}
-
-		public static IEnumerable<B> MapSameSelext<A, B>
-			( this IEnumerable<A> self, Func<A, B> f )
-			=> self.Select( f );
-
-		public static Maybe<B> Map<A, B>
-			( this Nothing self, Func<A, B> f )
-			=> None;
-
-		public static Maybe<B> Map<A, B>
-			( this Just<A> self, Func<A, B> f )
-			=> Just( f( self.Value ) );
-
-		public static Maybe<B> Map<A, B>
-			( this Maybe<A> self, Func<A, B> f )
-			=> self.Match(
-				Just: x => Just(f(x)) ,
-				Nothing : () =>  None);
-	}
-
-	public static class BindExt
-	{
-		public static Maybe<B> Bind<A, B>
-			( this Maybe<A> self, Func<A, Maybe<B>> f )
-			=> self.Match(
-				Nothing : () => None ,
-				Just : x => f(x));
-
-		public static IEnumerable<R> Bind<T, R>
-			( this IEnumerable<T> ts, Func<T, IEnumerable<R>> f )
-		{
-			foreach ( T t in ts )
-				foreach ( R r in f( t ) )
-					yield return r;
-		}
-
-		public static IEnumerable<R> Bind<T, R> // Bind Maybe => IEnumerable
-		( this Maybe<T> self, Func<T, IEnumerable<R>> func )
-		=> self.AsEnumerable().Bind( func );
-
-		public static IEnumerable<R> Bind<T, R> // Bind IEnumerable => Maybe
-			( this IEnumerable<T> self, Func<T, Maybe<R>> func )
-			=> self.Bind( t => func( t ).AsEnumerable() );
-
 
 	}
 
-	public static class Bindext2
+	public static class ExerciseBindMap
 	{
+		//public static Maybe<B> Map<A, B>(
+		//	this Maybe<A> self, Func<A, B> f )
+		//		=> self.Bind( x => Just(f(x)) );
+		//      => Just(f(self.Value));
 
-	
+		//public static IEnumerable<B> Map<A, B>
+		//	( this IEnumerable<A> self, Func<A, B> f )
+		//	=> self.Bind( x => List( f( x ) ) );
 
 	}
 
