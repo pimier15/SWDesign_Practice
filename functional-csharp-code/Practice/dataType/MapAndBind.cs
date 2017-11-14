@@ -66,6 +66,22 @@ namespace Practice.dataType
 					yield return r;
 		}
 
+		public static IEnumerable<R> Bind<T, R> // Bind Maybe => IEnumerable
+		( this Maybe<T> self, Func<T, IEnumerable<R>> func )
+		=> self.AsEnumerable().Bind( func );
+
+		public static IEnumerable<R> Bind<T, R> // Bind IEnumerable => Maybe
+			( this IEnumerable<T> self, Func<T, Maybe<R>> func )
+			=> self.Bind( t => func( t ).AsEnumerable() );
+
+
+	}
+
+	public static class Bindext2
+	{
+
+	
+
 	}
 
 

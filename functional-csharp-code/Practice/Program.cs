@@ -15,6 +15,17 @@ namespace Practice
 	{
 		static void Main( string[] args )
 		{
+			new MaybeAndEnumerableExample().main();
+
+
+			int[][] tt = new int[3][];
+			tt[0] = new int[] { 1, 2, 3 };
+			tt[1] = new int[] { 10, 20, 30 };
+			tt[2] = new int[] { 1000, 2000 };
+			var res= tt.Bind( x => x.Map(y => y*10000) ).ToList();
+
+
+
 			var temp = List(1,2,3);
 			var rang1 = List( Range( 1,3).ToArray() );
 			var rang2 = List( Range( 1,3).ToList() );

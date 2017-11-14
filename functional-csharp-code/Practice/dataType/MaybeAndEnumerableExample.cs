@@ -26,7 +26,8 @@ namespace Practice.dataType
 		{
 			// need to calculate avg of age
 
-			var avg = Population.Select( x => x.Age.Value).Average();
+			var avg = Population.Map( x => x.Age).ToList();
+			var avg2 = Population.Bind( x => x.Age);
 
 
 
