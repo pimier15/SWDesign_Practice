@@ -45,6 +45,8 @@ namespace LaYumba.Functional
          => this.isSome == other.isSome 
          && (this.isNone || this.value.Equals(other.value));
 
+
+
       public bool Equals(Option.None _) => isNone;
 
       public static bool operator == (Option<T> @this, Option<T> other) => @this.Equals(other);
