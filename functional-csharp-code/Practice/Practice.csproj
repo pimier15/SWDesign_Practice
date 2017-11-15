@@ -311,6 +311,7 @@
     <Compile Include="dataType\Complete\Maybe.cs" />
     <Compile Include="dataType\MapAndBind.cs" />
     <Compile Include="dataType\MaybeAndEnumerableExample.cs" />
+    <Compile Include="dataType\땨솓ㄱ.cs" />
     <Compile Include="Exercises\C4\GetWorkerPermit.cs" />
     <Compile Include="Exercises\C4\MapForISet_IDic.cs" />
     <Compile Include="Program.cs" />
