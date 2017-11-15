@@ -24,9 +24,9 @@ namespace Practice
 			=> population.Average( p => p.Earnings );
 
 		public static IEnumerable<Person> RichestQuartile
-			(this List<Person> pop)
+			( this List<Person> pop )
 			=> pop.OrderByDescending( k => k.Earnings )
-				  .Take(pop.Count/4)
+				  .Take( pop.Count / 4 );
 
 	}
 

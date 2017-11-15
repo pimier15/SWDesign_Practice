@@ -43,9 +43,39 @@ namespace Examples.Chapter05.Boc
 
 	}
 
+	public class MakeTransferController_FPExample : Controller
+	{
+		IValidator_FP2<MakeTransfer> validator;
+
+		[HttpPost, Route( "api/MakeTranfer" )]
+		public void MakeTransfer( [FromBody] MakeTransfer transfer ) //MakeTranfer에 요청사항이 담겨있다. 
+		{
+			Some( transfer )
+					.Map(Normalize)
+					.Where( validator.IsValid ) // MakeTransfer 는 데이터이다. 따라서 이 데이터로 시작해야한다.
+				    .ForEach( Book );
+
+
+		}
+
+
+		void Book( MakeTransfer trnsfer )
+				=> Console.WriteLine( trnsfer.Date );
+
+		MakeTransfer Normalize( MakeTransfer transfer )
+			=> transfer;
+
+	}
+
+
 	public interface IValidator_FP<A>
 	{
 		Option<A> IsValid( A a );
+	}
+
+	public interface IValidator_FP2<A>
+	{
+		bool IsValid( A a );
 	}
 
 
