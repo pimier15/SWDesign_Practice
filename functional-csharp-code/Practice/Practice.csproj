@@ -307,13 +307,17 @@
     <Compile Include="dataType\BindExample.cs" />
     <Compile Include="dataType\BindExample2.cs" />
     <Compile Include="dataType\Complete\EnumerableExtcs.cs" />
+    <Compile Include="dataType\Complete\Either.cs" />
     <Compile Include="dataType\ISet_IDict_Map.cs" />
     <Compile Include="dataType\Complete\Maybe.cs" />
     <Compile Include="dataType\MapAndBind.cs" />
     <Compile Include="dataType\MaybeAndEnumerableExample.cs" />
-    <Compile Include="dataType\땨솓ㄱ.cs" />
     <Compile Include="Exercises\C4\GetWorkerPermit.cs" />
     <Compile Include="Exercises\C4\MapForISet_IDic.cs" />
+    <Compile Include="Exercises\C6\Class1.cs" />
+    <Compile Include="Exercises\C6\eitehrExam.cs" />
+    <Compile Include="Exercises\C6\TransferExample.cs" />
+    <Compile Include="Exercises\C6\WakeUpSxamm_Either.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

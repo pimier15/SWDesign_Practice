@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practice.dataType
+namespace Practice.Exercises.C6
 {
-	class 땨솓ㄱ
+	class Class1
 	{
 	}
 }
