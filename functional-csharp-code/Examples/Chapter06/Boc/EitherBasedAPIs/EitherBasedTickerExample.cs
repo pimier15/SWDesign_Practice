@@ -16,8 +16,7 @@ namespace Examples.Chapter06.Boc.EitherBasedAPIs33
 	public class bOOKtRANSFERcONTROLLER : Controller
 	{
 
-		public IActionResult BookTransfer(BookTransfer transfer)
-				=> transfer.
+	
 	}
 
 

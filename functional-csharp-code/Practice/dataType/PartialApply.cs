@@ -16,8 +16,5 @@ namespace Practice.dataType
             ( this Func<A, B, C, R> f, A a )
             => ( b, c ) => f( a, b, c );
 
-
-
-
-    }
+	}
 }
