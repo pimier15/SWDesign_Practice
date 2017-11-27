@@ -8,8 +8,10 @@ namespace Practice.Exercises.C6
 {
 	using BOC.Domain;
 
-	class TransferExample
+	public class TransferExample
 	{
+
+
 	}
 
 	public static class Error

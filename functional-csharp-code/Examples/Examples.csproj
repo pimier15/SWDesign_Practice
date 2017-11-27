@@ -41,6 +41,7 @@
   <ItemGroup>
     <ProjectReference Include="..\LaYumba.Functional.Data\LaYumba.Functional.Data.csproj" />
     <ProjectReference Include="..\LaYumba.Functional\LaYumba.Functional.csproj" />
+    <ProjectReference Include="..\Practice\Practice.csproj" />
   </ItemGroup>
 
 </Project>
