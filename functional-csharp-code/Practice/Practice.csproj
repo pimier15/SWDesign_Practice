@@ -312,12 +312,14 @@
     <Compile Include="dataType\Complete\Maybe.cs" />
     <Compile Include="dataType\MapAndBind.cs" />
     <Compile Include="dataType\MaybeAndEnumerableExample.cs" />
+    <Compile Include="dataType\PartialApply.cs" />
     <Compile Include="Exercises\C4\GetWorkerPermit.cs" />
     <Compile Include="Exercises\C4\MapForISet_IDic.cs" />
     <Compile Include="Exercises\C6\Class1.cs" />
     <Compile Include="Exercises\C6\eitehrExam.cs" />
     <Compile Include="Exercises\C6\TransferExample.cs" />
     <Compile Include="Exercises\C6\WakeUpSxamm_Either.cs" />
+    <Compile Include="Exercises\C7\GreetingExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
