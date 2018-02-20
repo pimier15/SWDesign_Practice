@@ -18,4 +18,21 @@ namespace Examples
          , SqlTemplate sql, object param)
          => Connect(connString, conn => conn.Execute(sql, param));
    }
+
+    public static class test
+    {
+        public static void main()
+        {
+            ConnectionString str = new ConnectionString("100");
+
+            object sender = new object();
+
+            var fn = str.Query<int>();
+
+
+
+        }
+
+    }
+
 }
